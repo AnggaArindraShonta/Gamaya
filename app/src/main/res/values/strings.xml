@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Gamaya</string>
     <string name="todo">TODO</string>
-    <string name="next" />
-    <string name="skip" />
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
 </resources>
