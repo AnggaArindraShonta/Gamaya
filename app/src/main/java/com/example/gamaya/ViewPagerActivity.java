@@ -14,7 +14,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class ViewPager extends AppCompatActivity {
+public class ViewPagerActivity extends AppCompatActivity {
 
     private androidx.viewpager.widget.ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
@@ -91,7 +91,7 @@ public class ViewPager extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        Intent intent = new Intent(com.example.gamaya.ViewPager.this, HomeActivity.class);
+        Intent intent = new Intent(ViewPagerActivity.this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
