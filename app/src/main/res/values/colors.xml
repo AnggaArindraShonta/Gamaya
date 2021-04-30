@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#000000</color>
     <color name="dark">#21253B</color>
+    <color name="transparent">@android:color/transparent</color>
     <color name="transparent_dark">#E83D425C</color>
     <color name="red">#FF0000</color>
     <color name="blue">#1920C4</color>
