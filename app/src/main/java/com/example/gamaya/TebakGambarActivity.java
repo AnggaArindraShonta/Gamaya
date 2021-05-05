@@ -7,6 +7,7 @@ import com.example.gamaya.adapters.TebakGambarAdapter;
 import com.example.gamaya.databinding.ActivityTebakGambarBinding;
 import com.example.gamaya.utils.ScoringUtil;
 import com.example.gamaya.utils.TebakGambarUtil;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class TebakGambarActivity extends BaseActivity {
 
@@ -46,6 +47,15 @@ public class TebakGambarActivity extends BaseActivity {
             }
 
             nextQuestion();
+        });
+        binding.btnBack.setOnClickListener(v -> {
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle("Keluar Dari Tebak Gambar")
+                    .setMessage("Anda yakin ingin mengakhiri tebak gambar?")
+                    .setPositiveButton("Keluar", (dialog, which) -> onBackPressed())
+                    .setNegativeButton("Lanjut Tebak Gambar", (dialog, which) -> dialog.dismiss())
+                    .create()
+                    .show();
         });
     }
 

@@ -3,6 +3,7 @@ package com.example.gamaya;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -11,12 +12,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gamaya.utils.ScoringUtil;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class QuizActivity extends AppCompatActivity {
 
     TextView quiz;
     RadioGroup radioGroup;
     RadioButton pilihanA, pilihanB, pilihanC, pilihanD;
+
+    ImageButton btnBack;
+
     int nomor = 0;
     public static int hasil, benar, salah;
 
@@ -69,6 +74,7 @@ public class QuizActivity extends AppCompatActivity {
 
         quiz = findViewById(R.id.quiz);
         radioGroup = findViewById(R.id.pilihan);
+        btnBack = findViewById(R.id.btn_back);
         pilihanA = findViewById(R.id.pilihanA);
         pilihanB = findViewById(R.id.pilihanB);
         pilihanC = findViewById(R.id.pilihanC);
@@ -83,6 +89,16 @@ public class QuizActivity extends AppCompatActivity {
         radioGroup.check(0);
         benar = 0;
         salah = 0;
+
+        btnBack.setOnClickListener(v -> {
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle("Keluar Dari Quiz")
+                    .setMessage("Anda yakin ingin mengakhiri Quiz?")
+                    .setPositiveButton("Keluar", (dialog, which) -> onBackPressed())
+                    .setNegativeButton("Lanjut Quiz", (dialog, which) -> dialog.dismiss())
+                    .create()
+                    .show();
+        });
     }
 
     public void next(View view){
