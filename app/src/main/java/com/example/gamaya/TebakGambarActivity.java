@@ -45,9 +45,15 @@ public class TebakGambarActivity extends BaseActivity {
                 return;
             }
 
-            positioning++;
-            updateTebakGambar();
+            nextQuestion();
         });
+    }
+
+    private void nextQuestion() {
+        if ((positioning +1) >= TebakGambarUtil.getQuestions().length) return;
+
+        positioning++;
+        updateTebakGambar();
     }
 
     private void updateTebakGambar() {
