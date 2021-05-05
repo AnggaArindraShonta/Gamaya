@@ -2,7 +2,7 @@ package com.example.gamaya.utils;
 
 import com.example.gamaya.R;
 
-public class TebakGambarUtil {
+public class TebakGambarStore {
 
     private static final String[] questions = {
             "Yang manakah rumah adat daerah Aceh? ",

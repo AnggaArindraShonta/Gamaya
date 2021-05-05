@@ -5,15 +5,16 @@ import android.os.Bundle;
 
 import com.example.gamaya.adapters.TebakGambarAdapter;
 import com.example.gamaya.databinding.ActivityTebakGambarBinding;
+import com.example.gamaya.utils.TebakGambarQuiz;
 import com.example.gamaya.utils.ScoringUtil;
-import com.example.gamaya.utils.TebakGambarUtil;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class TebakGambarActivity extends BaseActivity {
 
     private ActivityTebakGambarBinding binding;
     private TebakGambarAdapter tebakGambarAdapter;
-    private int positioning = 0;
+    private TebakGambarQuiz quiz;
+
     private int correctAnswer = 0;
     private int wrongAnswer = 0;
 
@@ -24,21 +25,22 @@ public class TebakGambarActivity extends BaseActivity {
         setContentView(binding.getRoot());
 
         tebakGambarAdapter = new TebakGambarAdapter();
+        quiz = new TebakGambarQuiz();
 
         binding.rvTebakGambarAnswer.setAdapter(tebakGambarAdapter);
         updateTebakGambar();
         tebakGambarAdapter.setOnItemClickListener((view, answerImgRes, answerPosition) -> {
-            if (answerPosition == TebakGambarUtil.getCorrectAnswer(positioning)) {
+            if (quiz.checkAnswer(answerPosition)) {
                 correctAnswer++;
             }else {
                 wrongAnswer++;
             }
 
-            if ((positioning +1) >= TebakGambarUtil.getQuestions().length) {
+            if (quiz.isLastPosition()) {
                 Bundle bundle = new Bundle();
                 bundle.putInt(ScoringUtil.WRONG_ANSWER_COUNT, wrongAnswer);
                 bundle.putInt(ScoringUtil.CORRECT_ANSWER_COUNT, correctAnswer);
-                bundle.putInt(ScoringUtil.RESULT_SCORE, ScoringUtil.calculateScore(correctAnswer, TebakGambarUtil.getQuestions().length));
+                bundle.putInt(ScoringUtil.RESULT_SCORE, ScoringUtil.calculateScore(correctAnswer, quiz.size()));
                 Intent intent = new Intent(getApplicationContext(), QuizResultActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -60,15 +62,15 @@ public class TebakGambarActivity extends BaseActivity {
     }
 
     private void nextQuestion() {
-        if ((positioning +1) >= TebakGambarUtil.getQuestions().length) return;
+        if (quiz.isLastPosition()) return;
 
-        positioning++;
+        quiz.increasePosition();
         updateTebakGambar();
     }
 
     private void updateTebakGambar() {
-        binding.fabTebakGambarPositioning.setText("Tebak Gambar : " + (positioning + 1) + "/" + TebakGambarUtil.getQuestions().length);
-        binding.tvQuestion.setText(TebakGambarUtil.getQuestions(positioning));
-        tebakGambarAdapter.submitList(TebakGambarUtil.getChoices(positioning));
+        binding.fabTebakGambarPositioning.setText("Tebak Gambar : " + quiz.currentNumber() + "/" + quiz.size());
+        binding.tvQuestion.setText(quiz.getCurrentQuestion());
+        tebakGambarAdapter.submitList(quiz.getCurrentChoices());
     }
 }

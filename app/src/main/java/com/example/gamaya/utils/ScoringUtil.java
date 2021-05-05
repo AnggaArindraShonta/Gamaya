@@ -10,9 +10,4 @@ public class ScoringUtil {
     public static int calculateScore(int totalCorrectAnswer, int length){
         return (int) ((100.0 * totalCorrectAnswer) / length);
     }
-
-    public static class TebakGambar {
-        public static int correctAnswer = 0;
-        public static int wrongAnswer = 0;
-    }
 }
