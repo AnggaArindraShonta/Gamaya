@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AnswerKeyActivity extends AppCompatActivity {
+public class KunciJawabanActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_answer_key);
+        setContentView(R.layout.activity_kunci_jawaban);
     }
 }

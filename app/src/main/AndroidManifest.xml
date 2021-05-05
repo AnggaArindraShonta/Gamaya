@@ -9,23 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamaya">
-        <activity android:name=".EvalActivity"></activity>
+        <activity android:name=".KunciJawabanActivity"></activity>
+        <activity android:name=".EvalActivity" />
         <activity android:name=".TebakGambarActivity" />
-        <activity android:name=".AnswerKeyActivity" />
         <activity android:name=".ViewPagerActivity" />
         <activity android:name=".QuizResultActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".PetunjukActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
