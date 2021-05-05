@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.gamaya.utils.ScoringUtil;
+
 public class QuizActivity extends AppCompatActivity {
 
     TextView quiz;
@@ -99,8 +101,12 @@ public class QuizActivity extends AppCompatActivity {
                 pilihanC.setText(pilihan_jawaban[(nomor * 4) + 2]);
                 pilihanD.setText(pilihan_jawaban[(nomor * 4) + 3]);
             } else {
-                hasil = benar * 10;
+                Bundle bundle = new Bundle();
+                bundle.putInt(ScoringUtil.WRONG_ANSWER_COUNT, salah);
+                bundle.putInt(ScoringUtil.CORRECT_ANSWER_COUNT, benar);
+                bundle.putInt(ScoringUtil.RESULT_SCORE, ScoringUtil.calculateScore(benar, pertanyaan_quiz.length));
                 Intent intent = new Intent(getApplicationContext(), QuizResultActivity.class);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         } else {
