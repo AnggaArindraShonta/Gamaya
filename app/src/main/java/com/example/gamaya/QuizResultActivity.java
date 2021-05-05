@@ -1,47 +1,57 @@
 package com.example.gamaya;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
 
-import static com.example.gamaya.QuizActivity.hasil;
+import com.example.gamaya.databinding.ActivityQuizResultBinding;
+import com.example.gamaya.utils.ScoringUtil;
 
 public class QuizResultActivity extends AppCompatActivity {
 
-    FloatingActionButton home, kuncijawaban;
+    private ActivityQuizResultBinding binding;
+    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_result);
+        binding = ActivityQuizResultBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        FloatingActionButton home = findViewById(R.id.home);
-        FloatingActionButton kuncijawaban = findViewById(R.id.kuncijawabn);
-        TextView nilai = findViewById(R.id.nilai);
-        TextView hasil = findViewById(R.id.hasil);
-        hasil.setText("Jawaban Benar :"+QuizActivity.benar+"\nJawaban Salah :"+QuizActivity.salah);
-        nilai.setText(""+QuizActivity.hasil);
+        bundle = getIntent().getExtras();
 
-        home.setOnClickListener(new View.OnClickListener() {
+        binding.btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(QuizResultActivity.this, HomeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
-        kuncijawaban.setOnClickListener(new View.OnClickListener() {
+        binding.btnKunciJawaban.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(QuizResultActivity.this, KunciJawabanActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+        int correctCount = bundle.getInt(ScoringUtil.CORRECT_ANSWER_COUNT);
+        int wrongCount = bundle.getInt(ScoringUtil.WRONG_ANSWER_COUNT);
+        int unansweredCount = bundle.getInt(ScoringUtil.UNANSWERED_COUNT);
+        int resultScore = bundle.getInt(ScoringUtil.RESULT_SCORE);
+
+        binding.tvResultTotal.setText(String.valueOf(resultScore));
+        binding.tvUnansweredCount.setText(String.valueOf(unansweredCount));
+        binding.tvCorrectCount.setText(String.valueOf(correctCount));
+        binding.tvWrongCount.setText(String.valueOf(wrongCount));
+    }
 }
