@@ -41,7 +41,7 @@ public class TebakGambarStore {
             {R.drawable.tari_saman_mausekat, R.drawable.tari_makan_sirih, R.drawable.tari_tortor},
             {R.drawable.tari_selampit_delapan, R.drawable.tari_topeng, R.drawable.tari_piring},
             {R.drawable.tari_kipas, R.drawable.tari_jaipong, R.drawable.tari_tanggai},
-            {R.drawable.tari_kecak, R.drawable.tari_monong, R.drawable.tari_baksa_kembang},
+            {R.drawable.tari_kecak, R.drawable.tari_kondan, R.drawable.tari_baksa_kembang},
             {R.drawable.tari_piring, R.drawable.tari_lumense, R.drawable.tari_gambyong},
             {R.drawable.alat_musik_serune_kale, R.drawable.alat_musik_burdah, R.drawable.alat_musik_saluang},
             {R.drawable.alat_musik_gambus, R.drawable.alat_musik_aramba, R.drawable.alat_musik_angklung},
