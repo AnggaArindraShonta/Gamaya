@@ -35,7 +35,6 @@ public class QuizResultActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(QuizResultActivity.this, KunciJawabanActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
