@@ -18,14 +18,6 @@ public class ProfileActivity extends AppCompatActivity {
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btnBack.setOnClickListener(v -> {
-            new MaterialAlertDialogBuilder(this)
-                    .setTitle("Keluar Dari Tebak Gambar")
-                    .setMessage("Anda yakin ingin mengakhiri tebak gambar?")
-                    .setPositiveButton("Keluar", (dialog, which) -> onBackPressed())
-                    .setNegativeButton("Lanjut Tebak Gambar", (dialog, which) -> dialog.dismiss())
-                    .create()
-                    .show();
-        });
+        binding.btnBack.setOnClickListener(v -> onBackPressed());
     }
 }
