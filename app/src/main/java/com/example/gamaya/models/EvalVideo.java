@@ -1,12 +1,5 @@
 package com.example.gamaya.models;
 
-/**
- * Created on 5/16/21 by Pengkuh Dwi Septiandi (@pengdst)
- * <p>
- * - Github https://github.com/pengdst
- * - Gitlab https://gitlab.com/pengdst
- * - LinkedIn https://linkedin.com/in/pengdst
- */
 public class EvalVideo {
     private String title, subtitle, videoId;
 

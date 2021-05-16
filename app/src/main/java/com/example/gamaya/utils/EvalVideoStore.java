@@ -5,13 +5,6 @@ import com.example.gamaya.models.EvalVideo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created on 5/16/21 by Pengkuh Dwi Septiandi (@pengdst)
- * <p>
- * - Github https://github.com/pengdst
- * - Gitlab https://gitlab.com/pengdst
- * - LinkedIn https://linkedin.com/in/pengdst
- */
 public class EvalVideoStore {
 
     public static List<EvalVideo> getEvalVideos() {
