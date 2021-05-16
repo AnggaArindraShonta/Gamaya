@@ -2,6 +2,7 @@ package com.example.gamaya;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,16 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.gamaya.adapters.EvalAdapter;
 import com.example.gamaya.databinding.ActivityEvalBinding;
 import com.example.gamaya.utils.EvalVideoStore;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerCallback;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerFullScreenListener;
-
-import org.jetbrains.annotations.NotNull;
 
 public class EvalActivity extends AppCompatActivity {
 
     private ActivityEvalBinding binding;
     private EvalAdapter evalAdapter;
+    private boolean isNotFullscreen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +83,16 @@ public class EvalActivity extends AppCompatActivity {
             binding.rvVideoExplanation.setVisibility(View.GONE);
             binding.tvTitleExplanation.setVisibility(View.GONE);
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
+        this.isNotFullscreen = !isFullscreen;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (isNotFullscreen) {
+            binding.ypvExplanationVideo.toggleFullScreen();
+        } else {
+            super.onBackPressed();
         }
     }
 }
