@@ -40,7 +40,7 @@
                     android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tebak Gambar"
+                    android:text="Petunjuk Penggunaan"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -113,14 +113,32 @@
         app:layout_constraintVertical_bias="0.568" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/copy"
+        android:id="@+id/icon_copyright"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/ic_copyright"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_copyright"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.568" />
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="Copyright 2021"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_copyright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icon_copyright"
+        app:layout_constraintTop_toTopOf="@+id/icon_copyright" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
