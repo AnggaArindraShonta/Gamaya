@@ -7,14 +7,25 @@
     android:background="@color/dark"
     tools:context=".EvalActivity">
 
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/ypv_explanation_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_video_explanation"
         android:layout_width="match_parent"
-        android:layout_height="411dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/shape_rounded_top_transparent_dark"
         android:paddingTop="24dp"
-        tools:listitem="@layout/item_video_explanation"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ypv_explanation_video"
+        tools:listitem="@layout/item_video_explanation" />
 
     <TextView
         android:id="@+id/tv_title_explanation"

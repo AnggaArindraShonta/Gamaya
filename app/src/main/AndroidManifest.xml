@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gamaya">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamaya">
-        <activity android:name=".KunciJawabanActivity"></activity>
-        <activity android:name=".EvalActivity" />
+        <activity android:name=".KunciJawabanActivity" />
+        <activity android:name=".EvalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout" />
         <activity android:name=".TebakGambarActivity" />
         <activity android:name=".ViewPagerActivity" />
         <activity android:name=".QuizResultActivity" />

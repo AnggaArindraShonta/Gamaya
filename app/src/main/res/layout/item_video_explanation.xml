@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:layout_marginTop="8dp"
-    android:layout_marginBottom="4dp">
+    android:layout_marginBottom="4dp"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
 
     <ImageView
-        android:id="@+id/iv_icon_video"
+        android:id="@+id/iv_thumbnail_video"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/ic_icon_rounded_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,6 +25,16 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_icon_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_thumbnail_video"
+        app:layout_constraintEnd_toEndOf="@+id/iv_thumbnail_video"
+        app:layout_constraintStart_toStartOf="@+id/iv_thumbnail_video"
+        app:layout_constraintTop_toTopOf="@+id/iv_thumbnail_video" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -34,7 +46,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv_icon_video"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumbnail_video"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="Code Basic" />
