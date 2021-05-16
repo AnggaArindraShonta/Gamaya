@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,37 +10,42 @@
     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
         android:id="@+id/ypv_explanation_video"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_video_explanation"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/shape_rounded_top_transparent_dark"
-        android:paddingTop="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ypv_explanation_video"
-        tools:listitem="@layout/item_video_explanation" />
-
-    <TextView
-        android:id="@+id/tv_title_explanation"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_rounded_bottom_right_yellow"
-        android:paddingStart="24dp"
-        android:paddingTop="16dp"
-        android:paddingEnd="82dp"
-        android:paddingBottom="16dp"
-        android:text="Penjelasan Video"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rv_video_explanation"
-        app:layout_constraintStart_toStartOf="@+id/rv_video_explanation"
-        app:layout_constraintTop_toTopOf="@+id/rv_video_explanation" />
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="false"
+        app:behavior_skipCollapsed="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_video_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rounded_top_transparent_dark"
+            android:paddingTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_video_explanation" />
+
+        <TextView
+            android:id="@+id/tv_title_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_bottom_right_yellow"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="82dp"
+            android:paddingBottom="16dp"
+            android:text="Penjelasan Video"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/rv_video_explanation"
+            app:layout_constraintStart_toStartOf="@+id/rv_video_explanation"
+            app:layout_constraintTop_toTopOf="@+id/rv_video_explanation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
