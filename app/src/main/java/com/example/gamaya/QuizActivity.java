@@ -27,7 +27,7 @@ public class QuizActivity extends AppCompatActivity {
 
     //Pertanyaan
     String[] pertanyaan_quiz = new String[]{
-            "1.	Keberagman adat yang ada di Indonesia harus dimaknai sebagai ...",
+            "1.	Keberagaman adat yang ada di Indonesia harus dimaknai sebagai ...",
             "2. Indonesia mempunyai keragaman rumah adat di setiap daerah antara lain karena Indonesia mempunyai ...",
             "3. Berikut yang bukan bagian dari keberagaman budaya Indonesia adalah ",
             "4. Betang, Joglo dan Gadang adalah contoh kergaman budaya Indonesia berupa ... ",
@@ -46,7 +46,7 @@ public class QuizActivity extends AppCompatActivity {
             "Tarian daerah", "Rumah Adat", "Pakaian adat ", "Tanah Daerah",
             "Pakaian adat", "Tarian daerah", "Lagu daerah", "Rumah adat",
             "Laku Tepu", "Baju Bodo ", "Payas Agung", "Nggembe",
-            "Tari Kecak", "Tari Saman", "Tari Saman", "Tari Remo",
+            "Tari Kecak", "Tari Saman", "Tari Manuk Dadali", "Tari Remo",
             "Ulee Balang dari Jawa Barat", "Ulos dari Sumatra Utara", "Koteka dari Maluku ", "Paksian dari Jawa Barat",
             "Jawa Tengah", "Jambi ", "Sulawesi Utara", "Sumatera Selatan",
             "Tari Topeng dari Jawa Timur", "Tari  Saman dari Maluku Utara", "Tari Piring dari Kalimantan Selatan", "Tari Kipas dari Sulawesi Selatan",

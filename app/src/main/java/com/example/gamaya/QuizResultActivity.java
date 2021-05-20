@@ -30,13 +30,6 @@ public class QuizResultActivity extends AppCompatActivity {
                 finish();
             }
         });
-        binding.btnKunciJawaban.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(QuizResultActivity.this, KunciJawabanActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override

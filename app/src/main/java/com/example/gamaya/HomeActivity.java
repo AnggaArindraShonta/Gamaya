@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ImageButton btntebak, btneval, btnquiz, btnprofile, btnpetunjuk;
+    ImageButton btntebak, btneval, btnmateri, btnprofile, btnpetunjuk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class HomeActivity extends AppCompatActivity {
 
         btntebak = findViewById(R.id.btntebak);
         btneval = findViewById(R.id.btneval);
-        btnquiz = findViewById(R.id.btnquiz);
+        btnmateri = findViewById(R.id.btnmateri);
         btnprofile = findViewById(R.id.btnprofile);
         btnpetunjuk = findViewById(R.id.btnpetunjuk);
         btntebak.setOnClickListener(new View.OnClickListener() {
@@ -31,14 +31,14 @@ public class HomeActivity extends AppCompatActivity {
         btneval.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, EvalActivity.class);
+                Intent intent = new Intent(HomeActivity.this, QuizActivity.class);
                 startActivity(intent);
             }
         });
-        btnquiz.setOnClickListener(new View.OnClickListener() {
+        btnmateri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, QuizActivity.class);
+                Intent intent = new Intent(HomeActivity.this, MenuMateriActivity.class);
                 startActivity(intent);
             }
         });

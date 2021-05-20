@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintVertical_bias="0.451" />
 
     <ImageButton
         android:id="@+id/btneval"
@@ -43,18 +43,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btntebak"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <ImageButton
-        android:id="@+id/btnquiz"
+        android:id="@+id/btnmateri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/btnquiz"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/materi"
+        app:layout_constraintBottom_toTopOf="@+id/btnprofile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btntebak"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintTop_toBottomOf="@+id/btneval"
+        app:layout_constraintVertical_bias="0.198" />
 
     <ImageButton
         android:id="@+id/btnprofile"
