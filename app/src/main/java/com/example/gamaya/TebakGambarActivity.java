@@ -32,8 +32,10 @@ public class TebakGambarActivity extends BaseActivity {
         tebakGambarAdapter.setOnItemClickListener((view, answerImgRes, answerPosition) -> {
             if (quiz.checkAnswer(answerPosition)) {
                 correctAnswer++;
+                shortToast("Yeay, Jawaban Kamu Benar! :)");
             }else {
                 wrongAnswer++;
+                shortToast("Maaf, Jawaban Kamu Salah! :(");
             }
 
             if (quiz.isLastPosition()) {

@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.gamaya.utils.ScoringUtil;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-public class QuizActivity extends AppCompatActivity {
+public class QuizActivity extends BaseActivity {
 
     TextView quiz;
     RadioGroup radioGroup;
@@ -107,8 +107,14 @@ public class QuizActivity extends AppCompatActivity {
             RadioButton jawaban_user = findViewById(radioGroup.getCheckedRadioButtonId());
             String ambil_jawaban_user = jawaban_user.getText().toString();
             radioGroup.check(0);
-            if (ambil_jawaban_user.equalsIgnoreCase(jawaban_benar[nomor])) benar++;
-            else salah++;
+            if (ambil_jawaban_user.equalsIgnoreCase(jawaban_benar[nomor])) {
+                benar++;
+                shortToast("Yeay, Jawaban Kamu Benar! :)");
+            }
+            else {
+                salah++;
+                shortToast("Maaf, Jawaban Kamu Salah! :(");
+            }
             nomor++;
             if (nomor < pertanyaan_quiz.length) {
                 quiz.setText(pertanyaan_quiz[nomor]);
