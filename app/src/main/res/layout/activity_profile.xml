@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#21253B"
-    tools:context=".ProfileActivity">
+    tools:context=".ui.ProfileActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_layout"
@@ -40,7 +40,7 @@
                     android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Profile Pengembang"
+                    android:text="Profil Pengembang"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -91,15 +91,15 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsbold"
         android:gravity="center"
-        android:text="Bella Nova Pertiwi\nAngkatan 2017\nPendidikan Sekolah Dasar\nFakultas Ilmu Pendidikan\nUniversitas Pendidikan Yogyakarya"
+        android:text="Bella Nova Pertiwi\nAngkatan 2017\nPendidikan Guru Sekolah Dasar\nFakultas Ilmu Pendidikan\nUniversitas Negeri Yogyakarta"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appbar_layout"
-        app:layout_constraintVertical_bias="0.587" />
+        app:layout_constraintVertical_bias="0.558" />
 
     <ImageView
         android:id="@+id/imageView4"

@@ -1,4 +1,4 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 

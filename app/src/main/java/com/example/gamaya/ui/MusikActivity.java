@@ -1,24 +1,37 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
+import com.example.gamaya.R;
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class PakaianActivity extends AppCompatActivity {
+public class MusikActivity extends AppCompatActivity {
 
     public PDFView pdfView;
     public float zoomValue=1;
+    ImageButton btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pakaian);
+        setContentView(R.layout.activity_musik);
+
+        btn_back = findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MusikActivity.this, MenuMateriActivity.class);
+                startActivity(intent);
+            }
+        });
 
         pdfView = (PDFView)findViewById(R.id.pdfView);
-        pdfView.fromAsset("pakaian.pdf").defaultPage(-1)
+        pdfView.fromAsset("musik.pdf").defaultPage(-1)
                 .spacing(10)
                 .load();
     }

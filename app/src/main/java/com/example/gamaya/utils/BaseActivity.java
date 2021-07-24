@@ -1,4 +1,4 @@
-package com.example.gamaya;
+package com.example.gamaya.utils;
 
 import android.widget.Toast;
 

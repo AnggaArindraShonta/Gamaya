@@ -1,4 +1,4 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.example.gamaya.R;
 
 public class ViewPagerActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,11 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.gamaya.R;
+
 public class HomeActivity extends AppCompatActivity {
 
-    ImageButton btntebak, btneval, btnmateri, btnprofile, btnpetunjuk;
+    ImageButton btntebak, btneval, btnmateri, btnprofile, btnpetunjuk, btnkompetensi, btnpustaka;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +23,26 @@ public class HomeActivity extends AppCompatActivity {
         btnmateri = findViewById(R.id.btnmateri);
         btnprofile = findViewById(R.id.btnprofile);
         btnpetunjuk = findViewById(R.id.btnpetunjuk);
+        btnkompetensi = findViewById(R.id.btnkompetensi);
+        btnpustaka = findViewById(R.id.btnpustaka);
+        btnpustaka.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, PustakaActivity.class);
+                startActivity(intent);
+            }
+        });
         btntebak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, TebakGambarActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnkompetensi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, KompetensiActivity.class);
                 startActivity(intent);
             }
         });

@@ -84,7 +84,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/monster1" />
+                app:srcCompat="@drawable/astronout" />
 
             <TextView
                 android:id="@+id/textView"
@@ -92,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="Evaluasi"
-                android:layout_marginTop="50dp"
+                android:text="Tebak Gambar"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsregular"
                 android:gravity="center"
-                android:text="Belajarlah tentang\nkeberagaman sosial budaya\ndi Indonesia"
+                android:text="Bermain tebak gambar\ndan pilihlah gambar yang\nsesuai dengan soal"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"

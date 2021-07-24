@@ -1,4 +1,4 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;

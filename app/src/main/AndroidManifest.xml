@@ -6,37 +6,39 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamaya">
-        <activity android:name=".GambarTarianActivity"></activity>
-        <activity android:name=".MusikActivity" />
-        <activity android:name=".TarianActivity" />
-        <activity android:name=".PakaianActivity" />
-        <activity android:name=".RumahActivity" />
-        <activity android:name=".MenuMateriActivity" />
+        <activity android:name=".ui.KeragamanActivity"></activity>
+        <activity android:name=".ui.KompetensiActivity" />
+        <activity android:name=".ui.GambarTarianActivity" />
+        <activity android:name=".ui.MusikActivity" />
+        <activity android:name=".ui.TarianActivity" />
+        <activity android:name=".ui.PakaianActivity" />
+        <activity android:name=".ui.RumahActivity" />
+        <activity android:name=".ui.MenuMateriActivity" />
         <activity
-            android:name=".EvalActivity"
+            android:name=".ui.EvalActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout" />
-        <activity android:name=".TebakGambarActivity" />
-        <activity android:name=".ViewPagerActivity" />
-        <activity android:name=".QuizResultActivity" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".PetunjukActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ui.TebakGambarActivity" />
+        <activity android:name=".ui.ViewPagerActivity" />
+        <activity android:name=".ui.QuizResultActivity" />
+        <activity android:name=".ui.QuizActivity" />
+        <activity android:name=".ui.PetunjukActivity" />
+        <activity android:name=".ui.ProfileActivity" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.HomeActivity"
             android:launchMode="singleInstance" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.PustakaActivity" />
     </application>
 
 </manifest>

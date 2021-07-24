@@ -1,8 +1,9 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.gamaya.utils.BaseActivity;
 import com.example.gamaya.adapters.TebakGambarAdapter;
 import com.example.gamaya.databinding.ActivityTebakGambarBinding;
 import com.example.gamaya.utils.TebakGambarQuiz;

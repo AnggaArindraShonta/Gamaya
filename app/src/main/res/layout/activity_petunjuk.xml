@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#21253B"
-    tools:context=".PetunjukActivity">
+    tools:context=".ui.PetunjukActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_layout"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsbold"
         android:paddingStart="20dp"
-        android:text="1. Klik pada tombol 'Tebak Gambar' untuk mulai bermain game tebak gambar\n2. Klik pada tombol 'Evaluasi' untuk menonton video tarian dari berbagai macam daerah di Indonesia\n3. Klik pada tombol 'Quiz' untuk mengerjakan soal pilihan ganda\n4. Klik pada tombol 'Materi' untuk belajar tentang keanekaragaman budaya yang ada di Indonesia"
+        android:text="1. Klik pada tombol 'Materi' untuk belajar tentang keanekaragaman budaya yang ada di Indonesia\n2. Klik pada tombol 'Tebak Gambar' untuk mulai bermain game tebak gambar\n3. Klik pada tombol 'Evaluasi' untuk mengerjakan soal pilihan ganda"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,6 +99,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView1"
-        app:layout_constraintVertical_bias="0.439" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

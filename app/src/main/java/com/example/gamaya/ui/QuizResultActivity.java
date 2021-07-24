@@ -1,4 +1,4 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home"
-    tools:context=".HomeActivity">
+    tools:context=".ui.HomeActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -24,6 +24,28 @@
         app:layout_constraintVertical_bias="0.121" />
 
     <ImageButton
+        android:id="@+id/btnkompetensi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/kompetensi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.391" />
+
+    <ImageButton
+        android:id="@+id/btnmateri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/materi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnkompetensi"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
         android:id="@+id/btntebak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,30 +53,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.451" />
+        app:layout_constraintTop_toTopOf="@+id/btnmateri"
+        app:layout_constraintVertical_bias="0.148" />
 
     <ImageButton
         android:id="@+id/btneval"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/btnevaluasi"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btntebak"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintTop_toBottomOf="@+id/btntebak" />
 
     <ImageButton
-        android:id="@+id/btnmateri"
+        android:id="@+id/btnpustaka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/materi"
-        app:layout_constraintBottom_toTopOf="@+id/btnprofile"
+        android:background="@drawable/pustaka"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btneval"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintTop_toBottomOf="@+id/btneval" />
 
     <ImageButton
         android:id="@+id/btnprofile"
@@ -66,7 +84,20 @@
         app:layout_constraintHorizontal_bias="0.246"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btntebak"
-        app:layout_constraintVertical_bias="0.854" />
+        app:layout_constraintVertical_bias="0.755" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Profile Pengembang"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnprofile"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnpetunjuk"
@@ -78,6 +109,19 @@
         app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btntebak"
-        app:layout_constraintVertical_bias="0.854" />
+        app:layout_constraintVertical_bias="0.755" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Petunjuk Penggunaan"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnpetunjuk"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

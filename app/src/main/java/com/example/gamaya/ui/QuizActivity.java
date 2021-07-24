@@ -1,4 +1,4 @@
-package com.example.gamaya;
+package com.example.gamaya.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.gamaya.utils.BaseActivity;
+import com.example.gamaya.R;
 import com.example.gamaya.utils.ScoringUtil;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -27,44 +27,49 @@ public class QuizActivity extends BaseActivity {
 
     //Pertanyaan
     String[] pertanyaan_quiz = new String[]{
-            "1.	Keberagaman adat yang ada di Indonesia harus dimaknai sebagai ...",
-            "2. Indonesia mempunyai keragaman rumah adat di setiap daerah antara lain karena Indonesia mempunyai ...",
-            "3. Berikut yang bukan bagian dari keberagaman budaya Indonesia adalah ",
-            "4. Betang, Joglo dan Gadang adalah contoh kergaman budaya Indonesia berupa ... ",
-            "5. Pakaian adat berikut ini yang tidak berasal dari daerah di pulau Sulawesi adalah ...",
-            "6. Contoh tarian di Indonesia dengan pola lingkaran adalah ...",
-            "7. Pasangan pakaian adat di bawah ini yang tepat sesuai daerah asalnya adalah ...",
+            "1.	Alita dan Ifa berasal dari daerah yang berbeda. Alita berasal dari daerah yang bentang alamnya berupa pegunungan. Ifa berasal dari daerah pesisir pantai. Keduanya memiliki kebiasaan dan budaya yang berbeda. Faktor yang menyebabkan adanya ragam budaya di antara keduanya adalah ...",
+            "2. Mengenakan pakaian adat dari daerah masing-masing merupakan keragaman yang menunjukkan adanya perbedaan ...",
+            "3. Walau memiliki banyak keberagaman dan perbedaan, namun bangsa Indonesia tetap bersatu seperti dalam semboyan ...",
+            "4. Pasangan pakaian adat di bawah ini yang tepat sesuai daerah asalnya adalah ...",
+            "5. Pakaian adat berikut ini yang tidak berasal dari daerah pulau Sulawesi adalah ...",
+            "6. Honai merupakan rumah adat yang berasal dari daerah ...",
+            "7. Tarian ini merupakan tarian tradisonal suku Dayak yang dilakukan untuk memohon penyembuhan kepada Tuhan agar warga yang sakit di berikan kesembuhan. Namun seiring dengan perkembangan jaman, tarian ini tidak hanya di gunakan sebagai tarian penyembuhan saja, namun juga sebagai sarana hiburan sebagai pelestarian kesenian tradisional suku Dayak. Nama tarian yang di maksud adalah ...",
             "8. Kolintang merupakan alat musik yang berasal dari daerah ...",
-            "9. Pasangan tarian di bawah ini yang tepat sesuai daerah asalnya adalah ...",
-            "10. Honai merupakan rumah adat yang berasal dari daerah "
+            "9. Salah satu tarian paling populer dari provinsi Sumatera Utara. Tarian ini biasanya ditarikan oleh orang Batak dalam berbagai ritual penting seperti pesta pernikahan, pesta kematian, syukuran panen hingga upacara penyembuhan orang sakit. Nama tarian tersebut adalah ...",
+            "10. Perhatikan pernyataan-pernyataan berikut !\n" +
+                    "(1) Menonjolkan suku, agama, ras, dan golongan sendiri.\n" +
+                    "(2) Acuh tak acuh terhadap perbedaan dalam masyarakat.\n" +
+                    "(3) Menganggap hanya suku sendiri yang paling bagus dan suku lainnya jelek.\n" +
+                    "(4) Meningkatkan interaksi tanpa mempermasalahkan perbedaan.\n" +
+                    "Sikap menghargai keragaman budaya masyarakat Indonesia ditunjukkan pada nomor ...\n"
     };
 
     //Pilihan Jawaban a, b, c, d
     String[] pilihan_jawaban = new String[]{
-            "Kemunduran bangsa", "Kelemahan bangsa", "Kejatuhan bangsa", "Kekayaan bangsa",
-            "Beragam warna kulit", "Beragam suku  bangsa", "Banyak gunung berapi", "Laut yang  luas",
-            "Tarian daerah", "Rumah Adat", "Pakaian adat ", "Tanah Daerah",
-            "Pakaian adat", "Tarian daerah", "Lagu daerah", "Rumah adat",
+            "Ras asal", "Lingkungan geografis", "Latar belakang sejarah", "Perbedaan kepercayaan",
+            "Suku", "Kegemaran", "Jenis kelamin", "Agama",
+            "Bhineka Tunggal Ika", "Tut Wuri Handayani", "Ing Ngarsa Sung Tuladha", "Negara kertagama",
+            "Ulee Balang dari Jawa Barat", "Ulos dari Sumatra Utara ", "Koteka dari Maluku ", "Paksian dari Jawa Barat",
             "Laku Tepu", "Baju Bodo ", "Payas Agung", "Nggembe",
-            "Tari Kecak", "Tari Saman", "Tari Manuk Dadali", "Tari Remo",
-            "Ulee Balang dari Jawa Barat", "Ulos dari Sumatra Utara", "Koteka dari Maluku ", "Paksian dari Jawa Barat",
-            "Jawa Tengah", "Jambi ", "Sulawesi Utara", "Sumatera Selatan",
-            "Tari Topeng dari Jawa Timur", "Tari  Saman dari Maluku Utara", "Tari Piring dari Kalimantan Selatan", "Tari Kipas dari Sulawesi Selatan",
-            "Kalimantan Barat ", "Papua", "Bali", "Bali"
+            "Kalimantan Barat ", "Papua ", "Bali ", "Riau ",
+            "Tari Baksa Kembang ", "Tari Pendet ", "Tari Kipas ", "Tari Monong ",
+            "Jawa Tengah ", "Jambi ", "Sulawesi Utara ", "Sumatera Selatan ",
+            "Tari Tor – Tor ", "Tari Piring ", "Tari Gambyong ", "Tari Baksa Kembang ",
+            "(1)", "(2)", "(3)", "(4)"
     };
 
     //Jawaban Benar
     String[] jawaban_benar = new String[]{
-            "Kekayaan bangsa",
-            "Beragam suku  bangsa",
-            "Tanahdaerah",
-            "Rumah adat",
+            "Lingkungan geografis",
+            "Suku",
+            "Bhineka Tunggal Ika",
+            "Ulos dari Sumatra Utara ",
             "Payas Agung",
-            "Tari Kecak",
-            "Ulos dari Sumatra Utara",
+            "Papua ",
+            "Tari Monong ",
             "Sulawesi Utara",
-            "Tari Kipas dari Sulawesi Selatan",
-            "Papua"
+            "Tari Tor – Tor ",
+            "(4)"
     };
 
     @Override

@@ -4,14 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RumahActivity">
+    tools:context=".ui.RumahActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/yellow"
+        android:src="@drawable/ic_arrow_left_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/sebelumnya"
+        android:layout_marginBottom="4dp"
         android:onClick="previousPage"
+        android:src="@drawable/sebelumnya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -19,8 +29,9 @@
         android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/selanjutnya"
+        android:layout_marginBottom="4dp"
         android:onClick="nextPage"
+        android:src="@drawable/selanjutnya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_previous" />
 
@@ -28,8 +39,10 @@
         android:id="@+id/btn_zoomin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/zoomin"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
         android:onClick="zoomIn"
+        android:src="@drawable/zoomin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_next" />
 
@@ -37,8 +50,9 @@
         android:id="@+id/btn_zoomout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/zoomout"
+        android:layout_marginBottom="4dp"
         android:onClick="zoomOut"
+        android:src="@drawable/zoomout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_zoomin" />
 
@@ -47,9 +61,11 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.236">
 
     </com.github.barteksc.pdfviewer.PDFView>
 
